@@ -25,7 +25,6 @@ def scan_everything(router_ip):
     in the entire subnet.
 
 
-
     NOTE:---    ENTER THE FIRST THREE LAYERS OF THE ROUTER'S IP ADDRESS
 
     """
@@ -36,7 +35,6 @@ def scan_everything(router_ip):
         broadcast_packet = broadcast / packet 
         answered = send(broadcast_packet, verbose = False, return_packets= True)[0]
         print("\nIP:\n" + str(answered.pdst) + "\n\nMAC:\n" + str(answered.dst) + "\n--------------------")
-        sleep(1)
+        if answered.dst != "ff:ff:ff:ff:ff:ff":
+            sleep(1)
         x += 1
-
-scan_everything("192.168.0")
