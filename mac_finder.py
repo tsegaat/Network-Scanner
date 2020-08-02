@@ -24,7 +24,7 @@ def scan_everything():
     in the entire subnet
 
     NOTE if the ip does not appear it means it is
-    note being used
+    not being used
     """
     x = 0
     while x <= 255:
