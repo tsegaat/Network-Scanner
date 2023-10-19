@@ -1,7 +1,3 @@
-"""
-Creator is Tsega Amanuel
-Be sure to have scapy installed
-"""
 from scapy.all import *
 from time import sleep
 
@@ -9,7 +5,7 @@ from time import sleep
 def mac_finder(ip):
     """
     Sends an ARP packet broadcasting who has
-    the given ip and returns the Mac adress of
+    the given ip and returns the Mac address of
     the given ip
     """
     packet = ARP(pdst=ip)
@@ -21,12 +17,8 @@ def mac_finder(ip):
 def scan_everything(router_ip):
     """
     Sends the whole network an ARP packet
-    requesting the Mac adress of all the devices 
+    requesting the Mac addresses of all the devices 
     in the entire subnet.
-
-
-    NOTE:---    ENTER THE FIRST THREE LAYERS OF THE ROUTER'S IP ADDRESS
-
     """
     x = 0
     while x <= 255:
